@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raffa Rabbani | Portofolio TKJ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap');
+        
+        :root {
+            --primary: #00ff9d;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .title-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(0 255 157 / 0.15);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #00ff9d;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #00ff9d, #00cc7a);
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-lg border-b border-zinc-800 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-emerald-500 rounded-2xl flex items-center justify-center text-xl font-bold">FN</div>
+                <h1 class="title-font text-2xl font-semibold tracking-tighter">Raffa Rabbani</h1>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="nav-link text-sm font-medium hover:text-emerald-400">Tentang</a>
+                <a href="#skills" class="nav-link text-sm font-medium hover:text-emerald-400">Kompetensi</a>
+                <a href="#projects" class="nav-link text-sm font-medium hover:text-emerald-400">Proyek</a>
+                <a href="#contact" class="nav-link text-sm font-medium hover:text-emerald-400">Kontak</a>
+            </div>
+            
+            <a href="#" 
+               class="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-black font-semibold rounded-2xl text-sm transition-all">
+                Unduh CV
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-flex items-center gap-2 bg-zinc-900 border border-emerald-500/30 rounded-full px-5 py-2 text-sm">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                    Siswa TKJ â€¢ SMK Plus Pelita Nusantara
+                </div>
+                
+                <h1 class="title-font text-6xl md:text-7xl font-bold leading-tight">
+                    Halo, saya <span class="text-emerald-400">Raffa Rabbani</span>
+                </h1>
+                
+                <p class="text-2xl text-zinc-400">
+                    Calon <span class="text-white">Network Engineer</span> &amp; IT Enthusiast
+                </p>
+                
+                <p class="text-zinc-400 max-w-md">
+                    Siswa jurusan Teknik Komputer dan Jaringan yang passionate di bidang networking, 
+                    cybersecurity, dan pengembangan web.
+                </p>
+                
+                <div class="flex items-center gap-4">
+                    <a href="#projects" 
+                       class="px-8 py-4 bg-white text-black font-semibold rounded-3xl hover:bg-emerald-400 transition-all flex items-center gap-2">
+                        <i class="fas fa-rocket"></i>
+                        Lihat Proyek Saya
+                    </a>
+                    <a href="#contact" 
+                       class="px-8 py-4 border border-zinc-700 hover:border-emerald-400 font-semibold rounded-3xl transition-all">
+                        Hubungi Saya
+                    </a>
+                </div>
+                
+                <div class="flex gap-8 text-sm pt-6">
+                    <div>
+                        <span class="block text-emerald-400 font-mono text-3xl">1+</span>
+                        <span class="text-zinc-400">Tahun Belajar</span>
+                    </div>
+                    <div>
+                        <span class="block text-emerald-400 font-mono text-3xl">8</span>
+                        <span class="text-zinc-400">Proyek</span>
+                    </div>
+                    <div>
+                        <span class="block text-emerald-400 font-mono text-3xl">2+</span>
+                        <span class="text-zinc-400">Sertifikasi</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative flex justify-center">
+                <div class="w-80 h-80 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-[4rem] rotate-12 p-2 shadow-2xl">
+                    <div class="w-full h-full bg-zinc-900 rounded-[3rem] overflow-hidden">
+                        <a href="https://ibb.co.com/FtbrwtK"><img src="https://i.ibb.co.com/BRVpZRt/Whats-App-Image-2026-06-02-at-10-52-15.jpg" alt="Whats-App-Image-2026-06-02-at-10-52-15" border="0"></a>
+                    </div>
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-zinc-900 border border-emerald-500/50 rounded-3xl px-6 py-4 backdrop-blur-md">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-wifi text-emerald-400 text-3xl"></i>
+                        <div>
+                            <div class="text-sm font-medium">CCNA Certified</div>
+                            <div class="text-emerald-400 text-xs">Cisco Networking</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5">
+                    <h2 class="title-font text-5xl font-semibold mb-6">Tentang Saya</h2>
+                    <div class="space-y-4 text-zinc-300">
+                        <p>
+                            Saya adalah siswa kelas XII jurusan Teknik Komputer dan Jaringan di 
+                            <span class="text-emerald-400 font-medium">SMK Plus Pelita Nusantara</span>.
+                        </p>
+                        <p>
+                            Memiliki minat yang tinggi dalam dunia jaringan komputer, administrasi server, 
+                            dan keamanan siber. Selalu antusias mempelajari teknologi terbaru dan 
+                            menerapkannya dalam proyek-proyek nyata.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-7">
+                    <div class="bg-zinc-950 border border-zinc-800 rounded-3xl p-8">
+                        <h3 class="text-emerald-400 font-medium mb-6 flex items-center gap-3">
+                            <i class="fas fa-graduation-cap"></i>
+                            Pendidikan
+                        </h3>
+                        <div class="space-y-8">
+                            <div class="flex gap-6">
+                                <div class="w-20 text-right">
+                                    <span class="block text-sm text-zinc-400">2025 - Sekarang</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">SMK Plus Pelita Nusantara</div>
+                                    <div class="text-emerald-400">Teknik Komputer dan Jaringan (TKJ)</div>
+                                    <div class="text-sm text-zinc-400 mt-1">Nilai rata-rata: 88</div>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div class="w-20 text-right">
+                                    <span class="block text-sm text-zinc-400">2022 - 2025</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">smp it al fadl</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kompetensi TKJ -->
+    <section id="skills" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-5xl font-semibold mb-4">Kompetensi TKJ</h2>
+                <p class="text-zinc-400 max-w-md mx-auto">
+                    Berikut adalah beberapa kompetensi utama yang saya kuasai di bidang Teknik Komputer dan Jaringan
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 card-hover">
+                    <div class="w-14 h-14 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Jaringan Komputer</h3>
+                    <ul class="space-y-3 text-zinc-300">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Konfigurasi Router &amp; Switch Cisco</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Subnetting &amp; VLAN</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Wireless Networking</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Troubleshooting Jaringan</li>
+                    </ul>
+                </div>
+                
+                <!-- Skill 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 card-hover">
+                    <div class="w-14 h-14 bg-purple-500/10 text-purple-400 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Cybersecurity</h3>
+                    <ul class="space-y-3 text-zinc-300">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Dasar Keamanan Jaringan</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Firewall &amp; VPN</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Ethical Hacking Basic</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Pengamanan Server</li>
+                    </ul>
+                </div>
+                
+                <!-- Skill 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 card-hover">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Programming &amp; Web</h3>
+                    <ul class="space-y-3 text-zinc-300">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> HTML, CSS, JavaScript</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> PHP &amp; MySQL</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Python Dasar</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> MikroTik RouterOS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="title-font text-5xl font-semibold text-center mb-16">Proyek Terbaru</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-zinc-950 rounded-3xl overflow-hidden card-hover border border-zinc-800">
+                    <div class="h-56 bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center">
+                        <i class="fas fa-server text-7xl text-white/70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl">Sistem Monitoring Jaringan</h3>
+                        <p class="text-zinc-400 text-sm mt-2">Monitoring bandwidth &amp; perangkat menggunakan MikroTik + Grafana</p>
+                        <div class="flex gap-2 mt-6">
+                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">MikroTik</span>
+                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">Grafana</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-950 rounded-3xl overflow-hidden card-hover border border-zinc-800">
+                    <div class="h-56 bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center">
+                        <i class="fas fa-globe text-7xl text-white/70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl">Website Sekolah (SMK Pelita)</h3>
+                        <p class="text-zinc-400 text-sm mt-2">Website responsif dengan sistem informasi akademik</p>
+                        <div class="flex gap-2 mt-6">
+                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">HTML</span>
+                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">Tailwind</span>
+                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">PHP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-950 rounded-3xl overflow-hidden card-hover border border-zinc-800">
+                    <div class="h-56 bg-gradient-to-br from-emerald-600 to-teal-500 flex items-center justify-center">
+                        <i class="fas fa-wifi text-7xl text-white/70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl">Jaringan LAN Sekolah</h3>
+                        <p class="text-zinc-400 text-sm mt-2">Desain dan implementasi jaringan untuk 3 lantai gedung sekolah</p>
+                        <div class="flex gap-2 mt-6">
+                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">Cisco Packet Tracer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-black py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="title-font text-4xl font-semibold mb-6">Mari Berkolaborasi</h2>
+                    <p class="text-zinc-400">Terbuka untuk magang, kerja sama proyek, atau diskusi seputar teknologi.</p>
+                    
+                    <div class="mt-10 space-y-4">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-envelope text-emerald-400"></i>
+                            <span>raffasyahdin7@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-phone text-emerald-400"></i>
+                            <span>0859-5403-1791</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-map-marker-alt text-emerald-400"></i>
+                            <span>Depok, Jawa Barat</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col justify-between">
+                    <div class="flex gap-6 text-3xl">
+                        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fab fa-github"></i></a>
+                    </div>
+                    
+                    <div>
+                        <p class="text-xs text-zinc-500">Â© 2026 Raffa Rabbani â€¢ Portofolio Siswa TKJ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already loaded via CDN
+        console.log("%cPortofolio Raffa Rabbani - TKJ SMK Pelita Nusantara berhasil dimuat!", "color: #00ff9d; font-family: monospace");
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raffa Rabbani | Portofolio TKJ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap');
+        
+        :root {
+            --primary: #00ff9d;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .title-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(0 255 157 / 0.15);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #00ff9d;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #00ff9d, #00cc7a);
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-lg border-b border-zinc-800 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-emerald-500 rounded-2xl flex items-center justify-center text-xl font-bold">FN</div>
+                <h1 class="title-font text-2xl font-semibold tracking-tighter">Raffa Rabbani</h1>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="nav-link text-sm font-medium hover:text-emerald-400">Tentang</a>
+                <a href="#skills" class="nav-link text-sm font-medium hover:text-emerald-400">Kompetensi</a>
+                <a href="#projects" class="nav-link text-sm font-medium hover:text-emerald-400">Proyek</a>
+                <a href="#contact" class="nav-link text-sm font-medium hover:text-emerald-400">Kontak</a>
+            </div>
+            
+            <a href="#" 
+               class="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-black font-semibold rounded-2xl text-sm transition-all">
+                Unduh CV
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-flex items-center gap-2 bg-zinc-900 border border-emerald-500/30 rounded-full px-5 py-2 text-sm">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                    Siswa TKJ â€¢ SMK Plus Pelita Nusantara
+                </div>
+                
+                <h1 class="title-font text-6xl md:text-7xl font-bold leading-tight">
+                    Halo, saya <span class="text-emerald-400">Raffa Rabbani</span>
+                </h1>
+                
+                <p class="text-2xl text-zinc-400">
+                    Calon <span class="text-white">Network Engineer</span> &amp; IT Enthusiast
+                </p>
+                
+                <p class="text-zinc-400 max-w-md">
+                    Siswa jurusan Teknik Komputer dan Jaringan yang passionate di bidang networking, 
+                    cybersecurity, dan pengembangan web.
+                </p>
+                
+                <div class="flex items-center gap-4">
+                    <a href="#projects" 
+                       class="px-8 py-4 bg-white text-black font-semibold rounded-3xl hover:bg-emerald-400 transition-all flex items-center gap-2">
+                        <i class="fas fa-rocket"></i>
+                        Lihat Proyek Saya
+                    </a>
+                    <a href="#contact" 
+                       class="px-8 py-4 border border-zinc-700 hover:border-emerald-400 font-semibold rounded-3xl transition-all">
+                        Hubungi Saya
+                    </a>
+                </div>
+                
+                <div class="flex gap-8 text-sm pt-6">
+                    <div>
+                        <span class="block text-emerald-400 font-mono text-3xl">1+</span>
+                        <span class="text-zinc-400">Tahun Belajar</span>
+                    </div>
+                    <div>
+                        <span class="block text-emerald-400 font-mono text-3xl">8</span>
+                        <span class="text-zinc-400">Proyek</span>
+                    </div>
+                    <div>
+                        <span class="block text-emerald-400 font-mono text-3xl">2+</span>
+                        <span class="text-zinc-400">Sertifikasi</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative flex justify-center">
+                <div class="w-80 h-80 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-[4rem] rotate-12 p-2 shadow-2xl">
+                    <div class="w-full h-full bg-zinc-900 rounded-[3rem] overflow-hidden">
+                        <a href="https://ibb.co.com/FtbrwtK"><img src="https://i.ibb.co.com/BRVpZRt/Whats-App-Image-2026-06-02-at-10-52-15.jpg" alt="Whats-App-Image-2026-06-02-at-10-52-15" border="0"></a>
+                    </div>
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-zinc-900 border border-emerald-500/50 rounded-3xl px-6 py-4 backdrop-blur-md">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-wifi text-emerald-400 text-3xl"></i>
+                        <div>
+                            <div class="text-sm font-medium">CCNA Certified</div>
+                            <div class="text-emerald-400 text-xs">Cisco Networking</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5">
+                    <h2 class="title-font text-5xl font-semibold mb-6">Tentang Saya</h2>
+                    <div class="space-y-4 text-zinc-300">
+                        <p>
+                            Saya adalah siswa kelas XII jurusan Teknik Komputer dan Jaringan di 
+                            <span class="text-emerald-400 font-medium">SMK Plus Pelita Nusantara</span>.
+                        </p>
+                        <p>
+                            Memiliki minat yang tinggi dalam dunia jaringan komputer, administrasi server, 
+                            dan keamanan siber. Selalu antusias mempelajari teknologi terbaru dan 
+                            menerapkannya dalam proyek-proyek nyata.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-7">
+                    <div class="bg-zinc-950 border border-zinc-800 rounded-3xl p-8">
+                        <h3 class="text-emerald-400 font-medium mb-6 flex items-center gap-3">
+                            <i class="fas fa-graduation-cap"></i>
+                            Pendidikan
+                        </h3>
+                        <div class="space-y-8">
+                            <div class="flex gap-6">
+                                <div class="w-20 text-right">
+                                    <span class="block text-sm text-zinc-400">2025 - Sekarang</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">SMK Plus Pelita Nusantara</div>
+                                    <div class="text-emerald-400">Teknik Komputer dan Jaringan (TKJ)</div>
+                                    <div class="text-sm text-zinc-400 mt-1">Nilai rata-rata: 88</div>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div class="w-20 text-right">
+                                    <span class="block text-sm text-zinc-400">2022 - 2025</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">smp it al fadl</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kompetensi TKJ -->
+    <section id="skills" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-5xl font-semibold mb-4">Kompetensi TKJ</h2>
+                <p class="text-zinc-400 max-w-md mx-auto">
+                    Berikut adalah beberapa kompetensi utama yang saya kuasai di bidang Teknik Komputer dan Jaringan
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 card-hover">
+                    <div class="w-14 h-14 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Jaringan Komputer</h3>
+                    <ul class="space-y-3 text-zinc-300">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Konfigurasi Router &amp; Switch Cisco</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Subnetting &amp; VLAN</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Wireless Networking</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Troubleshooting Jaringan</li>
+                    </ul>
+                </div>
+                
+                <!-- Skill 2 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 card-hover">
+                    <div class="w-14 h-14 bg-purple-500/10 text-purple-400 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Cybersecurity</h3>
+                    <ul class="space-y-3 text-zinc-300">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Dasar Keamanan Jaringan</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Firewall &amp; VPN</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Ethical Hacking Basic</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Pengamanan Server</li>
+                    </ul>
+                </div>
+                
+                <!-- Skill 3 -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 card-hover">
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Programming &amp; Web</h3>
+                    <ul class="space-y-3 text-zinc-300">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> HTML, CSS, JavaScript</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> PHP &amp; MySQL</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> Python Dasar</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400"></i> MikroTik RouterOS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="title-font text-5xl font-semibold text-center mb-16">Proyek Terbaru</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-zinc-950 rounded-3xl overflow-hidden card-hover border border-zinc-800">
+                    <div class="h-56 bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center">
+                        <i class="fas fa-server text-7xl text-white/70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl">Sistem Monitoring Jaringan</h3>
+                        <p class="text-zinc-400 text-sm mt-2">Monitoring bandwidth &amp; perangkat menggunakan MikroTik + Grafana</p>
+                        <div class="flex gap-2 mt-6">
+                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">MikroTik</span>
+                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">Grafana</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-950 rounded-3xl overflow-hidden card-hover border border-zinc-800">
+                    <div class="h-56 bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center">
+                        <i class="fas fa-globe text-7xl text-white/70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl">Website Sekolah (SMK Pelita)</h3>
+                        <p class="text-zinc-400 text-sm mt-2">Website responsif dengan sistem informasi akademik</p>
+                        <div class="flex gap-2 mt-6">
+                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">HTML</span>
+                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">Tailwind</span>
+                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">PHP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-950 rounded-3xl overflow-hidden card-hover border border-zinc-800">
+                    <div class="h-56 bg-gradient-to-br from-emerald-600 to-teal-500 flex items-center justify-center">
+                        <i class="fas fa-wifi text-7xl text-white/70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl">Jaringan LAN Sekolah</h3>
+                        <p class="text-zinc-400 text-sm mt-2">Desain dan implementasi jaringan untuk 3 lantai gedung sekolah</p>
+                        <div class="flex gap-2 mt-6">
+                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">Cisco Packet Tracer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-black py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="title-font text-4xl font-semibold mb-6">Mari Berkolaborasi</h2>
+                    <p class="text-zinc-400">Terbuka untuk magang, kerja sama proyek, atau diskusi seputar teknologi.</p>
+                    
+                    <div class="mt-10 space-y-4">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-envelope text-emerald-400"></i>
+                            <span>raffasyahdin7@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-phone text-emerald-400"></i>
+                            <span>0859-5403-1791</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-map-marker-alt text-emerald-400"></i>
+                            <span>Depok, Jawa Barat</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col justify-between">
+                    <div class="flex gap-6 text-3xl">
+                        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fab fa-github"></i></a>
+                    </div>
+                    
+                    <div>
+                        <p class="text-xs text-zinc-500">Â© 2026 Raffa Rabbani â€¢ Portofolio Siswa TKJ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already loaded via CDN
+        console.log("%cPortofolio Raffa Rabbani - TKJ SMK Pelita Nusantara berhasil dimuat!", "color: #00ff9d; font-family: monospace");
+    </script>
+</body>
+</html>
